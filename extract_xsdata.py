@@ -63,12 +63,12 @@ for i, iso in enumerate(isotopes):
     cross_sections.append(x)
 
 
-data = {'isotopes': isotopes, 'energies': energies, 'cross_sections': cross_sections}
+xsdata = {'isotopes': isotopes, 'energies': energies, 'cross_sections': cross_sections}
 
-np.save('xsdata.npy', data, allow_pickle=True)
+np.save('xsdata.npy', xsdata, allow_pickle=True)
 
 # Load with:
-# data = np.load('xsdata.npy', allow_pickle=True)[()]
+# xsdata = np.load('xsdata.npy', allow_pickle=True)[()]
 
 
 

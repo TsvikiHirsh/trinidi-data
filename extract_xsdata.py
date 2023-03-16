@@ -1,3 +1,6 @@
+"""Script to extract cross section data from Lib80x data. 
+For correct execution, run this script from within the trinidi/data directory."""
+
 import os
 import openmc.data 
 import numpy as np
@@ -40,7 +43,7 @@ if(not os.path.exists(data_dir)):
     raise Exception(f'data_dir: `{data_dir}` does not exist')
 
 
-isotopes = all_isotopes[::10]
+isotopes = all_isotopes
 energies = []
 cross_sections = []
 
@@ -62,9 +65,10 @@ for i, iso in enumerate(isotopes):
 
 data = {'isotopes': isotopes, 'energies': energies, 'cross_sections': cross_sections}
 
-np.save('data.npy', data, allow_pickle=True)
+np.save('xsdata.npy', data, allow_pickle=True)
 
-data = np.load('data.npy', allow_pickle=True)[()]
+# Load with:
+# data = np.load('xsdata.npy', allow_pickle=True)[()]
 
 
 

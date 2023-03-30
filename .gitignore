@@ -3,3 +3,5 @@ __pycache__
 
 # macos files
 *.DS_Store
+
+examples/notebooks/.ipynb_checkpoints/

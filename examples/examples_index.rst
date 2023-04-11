@@ -14,8 +14,8 @@ Notebook Versions
    :maxdepth: 1
 
 
-   notebooks/cross_section.rst
-
+   notebooks/cross_section_demo.rst
+   notebooks/reconstruct_demo.rst
 
 Python Script Versions
 ======================
@@ -24,4 +24,5 @@ Python Script Versions
    :maxdepth: 1
 
 
-   cross_section_.rst
+   cross_section_demo_.rst
+   reconstruct_demo_.rst

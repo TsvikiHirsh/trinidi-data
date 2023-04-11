@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>cross_section</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>cross_section_demo</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14590,7 +14590,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div id="cell-id=35247161" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=74c18b5a" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14607,7 +14607,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 
 </div>
-<div id="cell-id=8bbbbd2e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=8b2e408a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14618,7 +14618,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div id="cell-id=b71e6b50" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=08627013" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14626,10 +14626,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">trinidi</span> <span class="kn">import</span> <span class="n">cross_section</span><span class="p">,</span> <span class="n">util</span>
-<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+<span class="kn">from</span> <span class="nn">trinidi</span> <span class="kn">import</span> <span class="n">cross_section</span>
 </pre></div>
 
      </div>
@@ -14638,7 +14641,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 
 </div>
-<div id="cell-id=c8fdf021" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=f271ae2d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14651,7 +14654,7 @@ Uncomment below to print output:</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=f4b4ebb8" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=69ff7b54" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14683,7 +14686,7 @@ Uncomment below to print output:</p>
 </div>
 
 </div>
-<div id="cell-id=68e1bbbd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=c3e9b420" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14694,7 +14697,7 @@ Uncomment below to print output:</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=44b81bef" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=377aae50" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14703,7 +14706,9 @@ Uncomment below to print output:</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">available_isotopes</span> <span class="o">=</span> <span class="n">cross_section</span><span class="o">.</span><span class="n">avail</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;available_isotopes = [</span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">, ..., </span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;available_isotopes = [</span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">, ..., </span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">available_isotopes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">]&quot;</span>
+<span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of isotopes = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">available_isotopes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -14735,7 +14740,7 @@ Number of isotopes = 533
 </div>
 
 </div>
-<div id="cell-id=652d07f0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=b45bac6d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14747,7 +14752,7 @@ Below we subselect all the uranium isotopes.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=51ac4732" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=1e2d1b63" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14800,7 +14805,7 @@ U-241	10.0 µeV to 30.0 MeV
 </div>
 
 </div>
-<div id="cell-id=0f2188e2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=2be117bf" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14811,7 +14816,7 @@ U-241	10.0 µeV to 30.0 MeV
 </div>
 </div>
 </div>
-</div><div id="cell-id=afcd9aba" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=8869fefd" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14831,7 +14836,7 @@ U-241	10.0 µeV to 30.0 MeV
 </div>
 
 </div>
-<div id="cell-id=88e49bef" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=8b2b55c3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14842,7 +14847,7 @@ U-241	10.0 µeV to 30.0 MeV
 </div>
 </div>
 </div>
-</div><div id="cell-id=1ff65ce4" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=473a3935" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14894,7 +14899,7 @@ U-241	10.0 µeV to 30.0 MeV
 </div>
 
 </div>
-<div id="cell-id=cac59762" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=e059b303" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14905,7 +14910,7 @@ U-241	10.0 µeV to 30.0 MeV
 </div>
 </div>
 </div>
-</div><div id="cell-id=a0ab53a7" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=4b4d9fb8" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14943,7 +14948,7 @@ U-241	10.0 µeV to 30.0 MeV
 </div>
 
 </div>
-<div id="cell-id=28161f86" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=2c58ce6a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14955,7 +14960,7 @@ The optional argument <code>function_of_energy=False</code> [default] allows plo
 </div>
 </div>
 </div>
-</div><div id="cell-id=0d5a8dfd" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=54ba49ff" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15004,7 +15009,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=5c7dd68a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=3459e957" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15016,7 +15021,7 @@ class="
 </div>
 </div>
 </div>
-</div><div id="cell-id=a1ef30d6" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=6b019eaf" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15037,7 +15042,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=e514be4a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=cf74d17c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15049,7 +15054,7 @@ class="
 </div>
 </div>
 </div>
-</div><div id="cell-id=52fed2eb" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=1545ef65" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15067,7 +15072,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=bbee53c1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=94449744" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15078,7 +15083,7 @@ class="
 </div>
 </div>
 </div>
-</div><div id="cell-id=65612a82" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=10a2bcd5" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15097,7 +15102,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=4093ca42" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=4d99704f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15108,7 +15113,7 @@ class="
 </div>
 </div>
 </div>
-</div><div id="cell-id=8204c8d1" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=11da44a1" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15163,7 +15168,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=98c79dc9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=95507d79" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15176,7 +15181,7 @@ class="
 </div>
 </div>
 </div>
-</div><div id="cell-id=47a14da7" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=157eac68" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>

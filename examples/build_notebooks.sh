@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 # Builds example notebooks and converts the files to python scripts.
+
 cd "${0%/*}" # go to 
 
 ###################################### from notebook to script
@@ -25,4 +25,8 @@ done
 
 jupyter nbconvert --to=notebook --inplace --execute notebooks/*.ipynb
 jupyter nbconvert --to=html notebooks/*.ipynb
+
+
+# jupyter nbconvert --to=notebook --inplace --execute notebooks/resolution_demo.ipynb
+# jupyter nbconvert --to=html notebooks/resolution_demo.ipynb
 

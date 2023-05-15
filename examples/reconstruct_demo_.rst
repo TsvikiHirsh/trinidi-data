@@ -3,4 +3,4 @@ Demo: trinidi.reconstruct Module
 ==================================
 
 
-.. literalinclude:: scripts/reconstruct_demo.py
+.. literalinclude:: examples/reconstruct_demo.py

@@ -3,4 +3,4 @@ Demo: trinidi.cross_section Module
 ==================================
 
 
-.. literalinclude:: scripts/cross_section_demo.py
+.. literalinclude:: examples/cross_section_demo.py

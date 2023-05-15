@@ -5,17 +5,17 @@ cd "${0%/*}" # go to
 
 ###################################### from notebook to script
 # jupyter run notebooks/*.ipynb
-# jupyter nbconvert --to python notebooks/*.ipynb  --output-dir scripts/
+# jupyter nbconvert --to python notebooks/*.ipynb  --output-dir examples/
 
 
-# for f in ./scripts/*.py; do
+# for f in ./examples/*.py; do
 #     sed -E -i '' '/^# In\[[0-9]+\]:/,+2d' $f
 # done
 ########################################
 
 
 # from script to notebook
-for f in ./scripts/*.py; do
+for f in ./examples/*.py; do
     filename=$(basename -- "$f")
     outfile="./notebooks/${filename%.*}.ipynb"
 

@@ -11,4 +11,4 @@ Example Notebooks
    notebooks/resolution_demo.rst
    notebooks/cross_section_demo.rst
    notebooks/reconstruct_demo.rst
-
+   notebooks/time_energy_calibration_demo.rst

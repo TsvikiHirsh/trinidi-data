@@ -3,30 +3,39 @@
 
 cd "${0%/*}" # go to script
 
-###################################### from notebook to script
-# jupyter run notebooks/*.ipynb
-# jupyter nbconvert --to python notebooks/*.ipynb  --output-dir examples/
+
+# Building single notebook by passing the file name of the script
+# otherwise building all notebooks.
+
+if [ $1 ]; then
+    filename=$(basename -- "$1")
+    outfile_ipynb="./notebooks/${filename%.*}.ipynb"
+
+    echo "Running on $filename"
+
+    python -m py2jn "examples/${filename}" "$outfile_ipynb"
 
 
-# for f in ./examples/*.py; do
-#     sed -E -i '' '/^# In\[[0-9]+\]:/,+2d' $f
-# done
-########################################
+    jupyter nbconvert --to=notebook --inplace --execute "$outfile_ipynb"
+    jupyter nbconvert --to=html "$outfile_ipynb"
+
+    # outfile_html="./notebooks/${filename%.*}.html"
+    # open -a "Safari" "$outfile_html"
+
+else
+    echo "Running on all files in ./examples/*.py"
+
+    for f in ./examples/*.py; do
+        filename=$(basename -- "$f")
+        outfile="./notebooks/${filename%.*}.ipynb"
+
+        python -m py2jn "$f" "$outfile"
+    done
+
+    jupyter nbconvert --to=notebook --inplace --execute notebooks/*.ipynb
+    jupyter nbconvert --to=html notebooks/*.ipynb
+
+    # open -a "Safari" notebooks/*.html
 
 
-# from script to notebook
-for f in ./examples/*.py; do
-    filename=$(basename -- "$f")
-    outfile="./notebooks/${filename%.*}.ipynb"
-
-    python -m py2jn "$f" "$outfile"
-done
-
-# use these to run all files
-jupyter nbconvert --to=notebook --inplace --execute notebooks/*.ipynb
-jupyter nbconvert --to=html notebooks/*.ipynb
-
-# use these to run single notebook 
-# jupyter nbconvert --to=notebook --inplace --execute notebooks/time_energy_calibration_demo.ipynb
-# jupyter nbconvert --to=html notebooks/time_energy_calibration_demo.ipynb
-
+fi

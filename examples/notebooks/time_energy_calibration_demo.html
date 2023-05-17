@@ -14590,7 +14590,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div id="cell-id=877113aa" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=2377f49e" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14607,14 +14607,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 
 </div>
-<div id="cell-id=62b12be0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=7a13203e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Demo:-Time-Energy-Calibration">Demo: Time-Energy Calibration<a class="anchor-link" href="#Demo:-Time-Energy-Calibration">&#182;</a></h1><p>This script illustrates the calibration of the time-energy
-correspondence. For many <code>trinidi</code> features we will need the
+correspondence. For many <code>TRINIDI</code> features we will need the
 time-of-flight (TOF) vector, <code>t_F</code> and time-of-arrival (TOA) vector
 <code>t_A</code>, which for the purposes of this example are assumed to be equal
 and simply referred to as time, <code>t</code>.</p>
@@ -14623,10 +14623,10 @@ correspondence between the time, $t$, and the energy, $E$ of the
 neutrons, i.e.</p>
 $$E = \frac{1}{2} m \left( \frac{L}{t} \right)$$<p>or</p>
 $$t = L \sqrt{ \frac{m}{2 E} } \; $$<p>where $m$ is the mass of the neutron.</p>
-<p>In <code>trinidi</code> we assume that the time bins are equidistant and increasing
+<p>In <code>TRINIDI</code> we assume that the time bins are equidistant and increasing
 i.e.</p>
 $$ t_i = i \Delta_t + t_0 \;$$<p>and that we have an estimate of the flight path length, $L$.</p>
-<p>In this example we show (one way) to estimate <code>Δt</code> and <code>t_0</code> yielding 
+<p>In this example we show (one way) to estimate <code>Δt</code> and <code>t_0</code> yielding
 the estimate of the vector <code>t</code>. This is done so that measured resonance
 peaks align with the corresponding resonances in the cross section
 dictionary, <code>D</code>.</p>
@@ -14634,7 +14634,7 @@ dictionary, <code>D</code>.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=57deb6af" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=b8f48188" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14655,7 +14655,7 @@ dictionary, <code>D</code>.</p>
 </div>
 
 </div>
-<div id="cell-id=cf0d357e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=ff12a020" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14668,7 +14668,7 @@ below generates the data and prints out the ground truth values of
 </div>
 </div>
 </div>
-</div><div id="cell-id=9cd721a9" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=e5f44d27" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14693,9 +14693,8 @@ below generates the data and prints out the ground truth values of
     <span class="k">return</span> <span class="n">y_s</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
 
 
-
 <span class="n">flight_path_length</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># [m]</span>
-<span class="n">isotopes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;U-235&quot;</span><span class="p">,</span> <span class="s2">&quot;U-238&quot;</span><span class="p">]</span> <span class="c1"># isotopes in the sample</span>
+<span class="n">isotopes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;U-235&quot;</span><span class="p">,</span> <span class="s2">&quot;U-238&quot;</span><span class="p">]</span>  <span class="c1"># isotopes in the sample</span>
 <span class="n">y_s</span> <span class="o">=</span> <span class="n">generate_measurement</span><span class="p">()</span>
 </pre></div>
 
@@ -14727,7 +14726,7 @@ Ground truth starting time: t_0 = 72.00 μs
 </div>
 
 </div>
-<div id="cell-id=dd5c0f46" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=90b95295" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14739,7 +14738,7 @@ that approximately covers the time region of the measurements.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=2b6a3494" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=e9b04b76" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14748,7 +14747,7 @@ that approximately covers the time region of the measurements.</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># rough range of TOA to generate D</span>
-<span class="n">dictionary_t_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span> 
+<span class="n">dictionary_t_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">650</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
 
 <span class="n">D</span> <span class="o">=</span> <span class="n">cross_section</span><span class="o">.</span><span class="n">XSDict</span><span class="p">(</span><span class="n">isotopes</span><span class="p">,</span> <span class="n">dictionary_t_A</span><span class="p">,</span> <span class="n">flight_path_length</span><span class="p">)</span>
 
@@ -14796,7 +14795,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=4cb1ef86" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=bef69095" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14813,7 +14812,7 @@ TOAs in the cross section dictionary for a few prominent resonances.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=4951fae1" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=35302f82" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14831,7 +14830,7 @@ TOAs in the cross section dictionary for a few prominent resonances.</p>
 </div>
 
 </div>
-<div id="cell-id=4f20550e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=60f0b140" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14842,7 +14841,7 @@ TOAs in the cross section dictionary for a few prominent resonances.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=bea2c608" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=c543bb86" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14898,7 +14897,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=c4e015a8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=6a65c5ff" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14911,7 +14910,7 @@ values of <code>Δt</code> and <code>t_0</code>.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=b4752150" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=5593bf7f" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14945,7 +14944,7 @@ values of <code>Δt</code> and <code>t_0</code>.</p>
 </div>
 
 </div>
-<div id="cell-id=5acc02ec" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=57333c2e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14956,7 +14955,7 @@ values of <code>Δt</code> and <code>t_0</code>.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=c567732b" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=a97324c4" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14965,9 +14964,9 @@ values of <code>Δt</code> and <code>t_0</code>.</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N_A</span> <span class="o">=</span> <span class="n">y_s</span><span class="o">.</span><span class="n">size</span>
-<span class="n">t_A</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N_A</span><span class="p">))</span> <span class="c1"># maps [0, 1, 2, ...] to [t_0, t_1, t_2, ...]</span>
+<span class="n">t_A</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N_A</span><span class="p">))</span>  <span class="c1"># maps [0, 1, 2, ...] to [t_0, t_1, t_2, ...]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, ..., </span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">] μs&quot;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, ..., </span><span class="si">{</span><span class="n">t_A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="si">= :</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">] μs&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14997,7 +14996,7 @@ values of <code>Δt</code> and <code>t_0</code>.</p>
 </div>
 
 </div>
-<div id="cell-id=d05084a8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=885876c6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15010,7 +15009,7 @@ verify that the calibration was successful.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=b0093bee" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=17884ce2" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15065,7 +15064,7 @@ class="
 </div>
 
 </div>
-<div id="cell-id=2ccf7ad6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=86c0041c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15078,7 +15077,7 @@ were printed above.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=9067425d" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=78a0d950" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15120,7 +15119,7 @@ Estitated starting time:    t_0 = 72.05 μs
 </div>
 
 </div>
-<div id="cell-id=3238b3e6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=9be00fa5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15134,7 +15133,7 @@ which implies the energy array is decreasing.</p>
 </div>
 </div>
 </div>
-</div><div id="cell-id=b13b7958" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=dc7b966f" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
